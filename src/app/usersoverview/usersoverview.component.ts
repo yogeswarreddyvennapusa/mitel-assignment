@@ -14,8 +14,8 @@ export class UsersoverviewComponent {
   users :any;
   fetchedUsers : users[] =[];
   private usersSub: Subscription;
-  
   constructor(private usersService : UsersService) { }
+  
 
   ngOnInit() {
     this.usersService.getUsers();

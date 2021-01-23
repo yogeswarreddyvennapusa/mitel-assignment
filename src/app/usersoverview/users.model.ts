@@ -17,3 +17,23 @@ export interface users {
   }
  }]
 }
+
+
+export interface dummyUser{
+ user: {
+  id: string,
+  name: string,
+  email: string,
+  age: number,
+  plan: {
+   type: string,
+   status: string,
+   description: string,
+   features: {
+    conferenceCalling: boolean,
+    callWaiting: boolean,
+    voiceMail: boolean,
+   }
+  }
+ }
+}

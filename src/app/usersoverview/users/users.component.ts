@@ -9,29 +9,19 @@ import {UsersService} from '../users.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
- private user: {
+ private Dummyuser: {
   id: string,
   name: string,
   email: string,
   age: number,
-  plan: {
-   type: string,
-   status: string,
-   description: string,
-   features: {
-    conferenceCalling: boolean,
-    callWaiting: boolean,
-    voiceMail: boolean,
-   }
-  }
 } ;
 
-  constructor(private route: ActivatedRoute) {  }
+  constructor(private usersService : UsersService, private route: ActivatedRoute) {  }
 
   ngOnInit() {
-    // this.user = {
-    //   id: this.route.snapshot.params['id'],
-    // }
+     this.Dummyuser = {
+       id: this.route.snapshot.params['id'],
+     }
     
   }
 
